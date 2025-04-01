@@ -1,29 +1,84 @@
-/* Set a dark background with white text */
-body {
-    background-color: #121212;  /* Dark background */
-    color: white;  /* White text */
-    font-family: Arial, sans-serif;  /* Set font */
-    margin: 0;  /* Remove margins */
-    padding: 0;  /* Remove padding */
-}
-/* Set a light background with black text */
-body {
-    background-color: white;  /* White background */
-    color: black;  /* Black text */
-    font-family: Arial, sans-serif;  /* Set font */
-    margin: 0;  /* Remove margins */
-    padding: 0;  /* Remove padding */
-}
-/* Heading styles */
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;  /* Font style */
-    text-align: center;  /* Center align headings */
+/* Basic reset for layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Paragraph styles */
-p {
-    font-size: 18px;  /* Font size */
-    line-height: 1.6;  /* Line height */
-    text-align: justify;  /* Justify text */
-    margin: 20px;  /* Add margin around the paragraph */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Navbar styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Hamburger Menu styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Show the nav menu when hamburger is clicked */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
 }
