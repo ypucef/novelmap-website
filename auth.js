@@ -41,3 +41,18 @@ document.getElementById("login-form").addEventListener("submit", function(e) {
     alert("تم تسجيل الدخول بنجاح! سيتم توجيهك إلى الصفحة الرئيسية.");
     window.location.href = "index.html";
 });
+// تسجيل الدخول مع Firebase (اختياري)
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // محاكاة تسجيل الدخول (يمكن استبدالها بـ Firebase)
+    if (email && password) {
+        alert("تم تسجيل الدخول بنجاح! سيتم توجيهك إلى الصفحة الرئيسية.");
+        window.location.href = "index.html";
+    } else {
+        alert("الرجاء إدخال جميع البيانات المطلوبة.");
+    }
+});
