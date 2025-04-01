@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel Details | NovelHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">NovelHub</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#">Novels</a>
+                    <a href="#">Authors</a>
+                    <a href="auth.html" class="auth-btn">Login</a>
+                </div>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="novel-detail">
+        <div class="container">
+            <div class="novel-header">
+                <div class="novel-cover-large">
+                    <img src="assets/images/novel1.jpg" alt="The Shadow King">
+                </div>
+                <div class="novel-info">
+                    <h1>The Shadow King</h1>
+                    <p class="author">By Martha Wells</p>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.5 (1,234 ratings)</span>
+                    </div>
+                    <div class="meta">
+                        <span><i class="fas fa-book-open"></i> 24 Chapters</span>
+                        <span><i class="fas fa-tag"></i> Fantasy</span>
+                    </div>
+                    <p class="description">
+                        In a world where shadows hold power, a young king must navigate treacherous politics 
+                        and ancient magic to save his kingdom from an unseen threat that lurks in the darkness.
+                    </p>
+                    <div class="actions">
+                        <button class="btn btn-primary"><i class="fas fa-book-open"></i> Read First Chapter Free</button>
+                        <button class="btn btn-secondary"><i class="fas fa-shopping-cart"></i> Buy Full Novel ($9.99)</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="novel-content">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="chapters">Chapters</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    <button class="tab-btn" data-tab="details">Details</button>
+                </div>
+
+                <div class="tab-content active" id="chapters">
+                    <h3>Chapters List</h3>
+                    <div class="chapter-list">
+                        <div class="chapter-item free">
+                            <span>Chapter 1: The Awakening</span>
+                            <button class="btn btn-small">Read Free</button>
+                        </div>
+                        <div class="chapter-item locked">
+                            <span>Chapter 2: The Shadow Rises</span>
+                            <button class="btn btn-small">Unlock ($0.99)</button>
+                        </div>
+                        <!-- More chapters would be listed here -->
+                    </div>
+                </div>
+
+                <div class="tab-content" id="reviews">
+                    <h3>Reader Reviews</h3>
+                    <div class="review-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-author">Alex Johnson</div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                Absolutely loved this book! The world-building is incredible and the characters 
+                                feel so real. Couldn't put it down!
+                            </div>
+                        </div>
+                        <!-- More reviews would be listed here -->
+                    </div>
+                </div>
+
+                <div class="tab-content" id="details">
+                    <h3>Novel Details</h3>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <strong>Published:</strong>
+                            <span>June 15, 2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Pages:</strong>
+                            <span>324</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Language:</strong>
+                            <span>English</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Genre:</strong>
+                            <span>Fantasy, Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Tab switching for novel detail page
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.getAttribute('data-tab');
+                
+                // Update active tab button
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Update active content
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
