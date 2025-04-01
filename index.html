@@ -43,30 +43,16 @@
 </body>
 </html>
 <!DOCTYPE html>
-<html>
-<head>
-  <title>تسجيل الدخول</title>
-</head>
-<body>
-  <h1>تسجيل الدخول</h1>
-  <input type="email" id="email" placeholder="البريد الإلكتروني">
-  <input type="password" id="password" placeholder="كلمة المرور">
-  <button id="login-btn">تسجيل الدخول</button>
-
-  <!-- أضف مكتبة Firebase -->
-  <script type="module" src="auth.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovelMap - تسجيل الدخول</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- شريط التنقل (مثل الصورة الأولى) -->
+    <!-- شريط التنقل (مطابق للصفحة الرئيسية) -->
     <nav class="navbar">
         <div class="logo">NovelMap</div>
         <ul class="nav-links">
@@ -78,21 +64,26 @@
         </ul>
     </nav>
 
-    <!-- نموذج تسجيل الدخول (مثل الصورة الثانية مع تحسينات) -->
-    <div class="login-container">
-        <h2>تسجيل الدخول</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="email">البريد الإلكتروني</label>
-                <input type="email" id="email" placeholder="example@novelmap.com" required>
+    <!-- قسم تسجيل الدخول -->
+    <div class="auth-container">
+        <div class="auth-form">
+            <h2>تسجيل الدخول</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" required placeholder="example@novelmap.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" required placeholder="********">
+                </div>
+                <button type="submit" class="btn-primary">تسجيل الدخول</button>
+            </form>
+            <div class="auth-footer">
+                <p>ليس لديك حساب؟ <a href="signup.html">أنشئ حسابًا جديدًا</a></p>
+                <p><a href="forgot-password.html">نسيت كلمة المرور؟</a></p>
             </div>
-            <div class="input-group">
-                <label for="password">كلمة المرور</label>
-                <input type="password" id="password" placeholder="********" required>
-            </div>
-            <button type="submit" class="login-btn">تسجيل الدخول</button>
-        </form>
-        <p class="signup-link">ليس لديك حساب؟ <a href="signup.html">أنشئ حسابًا</a></p>
+        </div>
     </div>
 </body>
 </html>
