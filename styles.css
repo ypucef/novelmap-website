@@ -1,0 +1,29 @@
+/* Set a dark background with white text */
+body {
+    background-color: #121212;  /* Dark background */
+    color: white;  /* White text */
+    font-family: Arial, sans-serif;  /* Set font */
+    margin: 0;  /* Remove margins */
+    padding: 0;  /* Remove padding */
+}
+/* Set a light background with black text */
+body {
+    background-color: white;  /* White background */
+    color: black;  /* Black text */
+    font-family: Arial, sans-serif;  /* Set font */
+    margin: 0;  /* Remove margins */
+    padding: 0;  /* Remove padding */
+}
+/* Heading styles */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;  /* Font style */
+    text-align: center;  /* Center align headings */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 18px;  /* Font size */
+    line-height: 1.6;  /* Line height */
+    text-align: justify;  /* Justify text */
+    margin: 20px;  /* Add margin around the paragraph */
+}
