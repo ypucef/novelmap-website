@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovelMap</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
 </head>
 <body>
     <header>
         <h1>NovelMap</h1>
-        <nav>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav id="navMenu" class="hidden">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Novels</a></li>
@@ -18,7 +23,6 @@
                 <li><a href="#">Login</a></li>
             </ul>
         </nav>
-        <link rel="stylesheet" href="css/styles.css">
     </header>
     <section class="featured">
         <h2>Editor's Choice</h2>
@@ -30,10 +34,11 @@
     </section>
     <section class="trending">
         <h2>Trending This Week</h2>
-        
     </section>
     <footer>
         <p>&copy; 2025 NovelMap. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script> <!-- ربط ملف JavaScript -->
 </body>
 </html>
