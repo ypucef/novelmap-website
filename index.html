@@ -3,89 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovelMap</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NovelHub - Discover Amazing Stories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>NovelMap</h1>
-        <div class="hamburger" id="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">NovelHub</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="#">Novels</a>
+                    <a href="#">Authors</a>
+                    <a href="auth.html" class="auth-btn">Login</a>
+                </div>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
         </div>
-        <nav id="navMenu" class="hidden">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="novels.html">Novels</a></li>
-                <li><a href="library.html">Library</a></li>
-                <li><a href="premium.html">Premium</a></li>
-                <li><a href="login.html" class="login-link">Login</a></li>
-            </ul>
-        </nav>
     </header>
-    
-    <section class="featured">
-        <h2>Editor's Choice</h2>
-        <div class="novel-card">
-            <img src="novel-cover.jpg" alt="Novel Cover">
-            <h3>I Was Reincarnated in a Novel I Wrote</h3>
-            <p>Summary: A writer reincarnates into their own novel...</p>
-        </div>
-    </section>
-    
-    <section class="trending">
-        <h2>Trending This Week</h2>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 NovelMap. All rights reserved.</p>
-    </footer>
 
-    <script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovelMap - تسجيل الدخول</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">NovelMap</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="novels.html">Novels</a></li>
-            <li><a href="library.html">Library</a></li>
-            <li><a href="premium.html">Premium</a></li>
-            <li><a class="active" href="login.html">Login</a></li>
-        </ul>
-    </nav>
-
-    <div class="auth-container">
-        <div class="auth-form">
-            <h2>تسجيل الدخول</h2>
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" id="email" required placeholder="example@novelmap.com">
-                </div>
-                <div class="input-group">
-                    <label for="password">كلمة المرور</label>
-                    <input type="password" id="password" required placeholder="********">
-                </div>
-                <button type="submit" class="btn-primary">تسجيل الدخول</button>
-            </form>
-            <div class="auth-footer">
-                <p>ليس لديك حساب؟ <a href="signup.html">أنشئ حسابًا جديدًا</a></p>
-                <p><a href="forgot-password.html">نسيت كلمة المرور؟</a></p>
+    <section class="hero">
+        <div class="container">
+            <h1>Discover a World of Amazing Stories</h1>
+            <p>The largest collection of premium English novels</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search for a novel...">
+                <button><i class="fas fa-search"></i></button>
             </div>
         </div>
-    </div>
-    
+    </section>
+
+    <section class="featured-novels">
+        <div class="container">
+            <h2 class="section-title">Featured Novels</h2>
+            <div class="novels-grid" id="featuredNovels">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <div class="categories-list">
+                <a href="#" class="category">Romance</a>
+                <a href="#" class="category">Fantasy</a>
+                <a href="#" class="category">Sci-Fi</a>
+                <a href="#" class="category">Mystery</a>
+                <a href="#" class="category">Horror</a>
+                <a href="#" class="category">Adventure</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="weekly-top">
+        <div class="container">
+            <h2 class="section-title">Weekly Top Reads</h2>
+            <div class="novels-grid" id="topNovels">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NovelHub</h3>
+                    <p>The best platform for novel readers and writers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 NovelHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
