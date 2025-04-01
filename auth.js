@@ -28,3 +28,16 @@ document.getElementById("login-btn").addEventListener("click", () => {
       alert("error: " + error.message);
     });
 });
+document.getElementById("login-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // هنا يمكنك إضافة اتصال بـ Firebase أو أي خدمة تسجيل دخول
+    console.log("تم إدخال:", email, password);
+    
+    // عرض رسالة نجاح (مؤقتة)
+    alert("تم تسجيل الدخول بنجاح! سيتم توجيهك إلى الصفحة الرئيسية.");
+    window.location.href = "index.html";
+});
